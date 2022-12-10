@@ -4,6 +4,8 @@ Public IP of Load Balancer: http://40.77.90.104/
 <img src=4.png>
 <img src=5.png>
 
+```json
+
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
