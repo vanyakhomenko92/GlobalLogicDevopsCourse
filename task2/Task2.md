@@ -1,10 +1,8 @@
-![alt text](2.png)
-![alt text](3.png)
-![alt text](4.png)
-![alt text](5.png)
-
-
-
+Public IP of Load Balancer: http://40.77.90.104/
+<img src=2.png>
+<img src=3.png>
+<img src=4.png>
+<img src=5.png>
 
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
