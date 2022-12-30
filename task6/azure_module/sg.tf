@@ -1,13 +1,11 @@
 # --- Security Group ---
-
-# Azure Security Group
-resource "azurerm_network_security_group" "vm_sg" {
+resource "azurerm_network_security_group" "sg" {
   name                = "grafana_sg"
   location            = azurerm_resource_group.grafana_rg.location
   resource_group_name = azurerm_resource_group.grafana_rg.name
 
   security_rule {
-    name                       = "Allow_Grafana"
+    name                       = "For Grafana"
     priority                   = 200
     direction                  = "Inbound"
     access                     = "Allow"
@@ -18,7 +16,7 @@ resource "azurerm_network_security_group" "vm_sg" {
     destination_address_prefix = "*"
   }
   security_rule {
-    name                       = "ssh"
+    name                       = "For ssh"
     priority                   = 100
     direction                  = "Inbound"
     access                     = "Allow"
