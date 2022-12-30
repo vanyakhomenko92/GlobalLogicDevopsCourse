@@ -1,4 +1,4 @@
-resource "aws_security_group" "Grafana_security" {
+resource "aws_security_group" "grafana_security" {
   name = "Security Group"
   description = "Grafana security group"
 
