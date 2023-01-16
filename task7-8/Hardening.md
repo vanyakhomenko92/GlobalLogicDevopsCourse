@@ -12,6 +12,10 @@ To run a playbook please use:
 ```
 ansible-playbook playbook.yml -t 'role1'
 ```
+then: 
+```
+ansible-playbook playbook.yml -t 'role2'
+```
 ![image](img/2.png)
 <br>
 To connect to the instance please use this command:
