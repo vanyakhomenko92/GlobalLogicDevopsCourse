@@ -1,13 +1,12 @@
- Task7.
-
- Execution:
-- I created EC2 instance in AWS
+----------------------------------------------
+ - I created EC2 instance in AWS
 ![image](img/1.png)
 Here is my ansible roles structure: </br>
 -  [inventory](hosts)
 -  [2 roles](roles/install_packages/tasks/main.yml) for installing packages and hardening users password
 -  [ansible.cfg](ansible.cfg) file with login info
 -  [playbook](playbook.yml) with 2 roles
+----------------------------------------------
 
 To run a playbook please use:
 ```
