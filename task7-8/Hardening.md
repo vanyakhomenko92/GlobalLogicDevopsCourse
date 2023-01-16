@@ -9,12 +9,12 @@ Here is my ansible roles structure: </br>
 -  [ansible.cfg](ansible.cfg) file with login info
 -  [playbook](playbook.yml) with 2 roles
 
-To run a playbook I used command in WSL:
+To run a playbook please use:
 ```
 ansible-playbook playbook.yml -t 'role1'
 ```
 ![image](img/2.png)
-To connect to the instance I used command in WSL:
+To connect to the instance please use this command:
 ```
 ssh -i ~/.ssh/devops.pem" ubuntu@ec2-44-212-10-217.compute-1.amazonaws.com
 ```
