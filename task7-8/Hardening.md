@@ -14,10 +14,13 @@ To run a playbook please use:
 ansible-playbook playbook.yml -t 'role1'
 ```
 ![image](img/2.png)
+<br>
 To connect to the instance please use this command:
 ```
 ssh -i ~/.ssh/devops.pem" ubuntu@ec2-44-212-10-217.compute-1.amazonaws.com
 ```
+![image](img/5.png)
+<br>
 - Add user <i>user1</i>. There were 3 unsuccessful tryies with simple passwords
 ![image](img/3.png)
 - The successful attemp was `user2`. Here is I've used more difficult password with letters, numbers and specific symbols
