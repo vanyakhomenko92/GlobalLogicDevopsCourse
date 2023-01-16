@@ -1,0 +1,7 @@
+---
+- name: Install packages and harden users passwords
+  hosts: pam_hardener_host
+  become: yes
+  roles:
+    - { role: roles/install_packages, tags: 'role1'}
+    - { role: roles/harden_passwords, tags: 'role2'}
