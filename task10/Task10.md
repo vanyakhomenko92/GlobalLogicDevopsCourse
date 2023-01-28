@@ -1,6 +1,7 @@
 Docker. Task1 
 ----------------------------------------------
 - I installed Docker on AWS instance
+</br>
 ![image](img/1.png)
 - Here is my Dockerfile based on Nginx image: [Dockerfile1](Dockerfile1)
 - with command I built my image
