@@ -1,4 +1,4 @@
-Docker. Task1 <br>
+Docker. Task1 
 ----------------------------------------------
 - I installed Docker on AWS instance
 ![image](img/1.png)
@@ -12,7 +12,7 @@ docker build -t nginx:latest .
 ```
 docker run -name task1 -d -p 8080:80 nginx:latest 
 ```
-![image](img/3.png) </br>
+![image](img/3.png)
 - here is the result 
 ![image](img/4.png)
 ----------------------------------------------
