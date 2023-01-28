@@ -19,11 +19,16 @@ docker run -name task1 -d -p 8080:80 nginx:latest
 ![image](img/4.png)
 ----------------------------------------------
 
-To run a playbook please use:
+Docker. Task2
+
+
+- I created 2 networks: private and public:
 ```
-ansible-playbook playbook.yml -t 'role1'
+docker network create private --internal
+docker network create public
 ```
-then: 
+- I prepared [Dockerfile2](Dockerfile2)
+
 ```
 ansible-playbook playbook.yml -t 'role2'
 ```
