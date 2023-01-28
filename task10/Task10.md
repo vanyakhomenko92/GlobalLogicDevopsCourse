@@ -29,18 +29,24 @@ docker network create public
 ```
 - I prepared [Dockerfile2](Dockerfile2)
 
+- I built an image based on Dockerfile with command
 ```
-ansible-playbook playbook.yml -t 'role2'
+docker build -t ping .
 ```
-![image](img/2.png)
-<br>
-To connect to the instance please use this command:
+![image](img/7.png)
+
+- Then I ran my images:
+
 ```
-ssh -i ~/.ssh/devops.pem" ubuntu@ec2-44-212-10-217.compute-1.amazonaws.com
+docker run -name private_container1 -d -p 8080:80 ping:latest
+docker run -name public_container1 -d -p 8080:80 ping:latest
 ```
-![image](img/5.png)
-<br>
-- Add user <i>user1</i>. There were 3 unsuccessful tryies with simple passwords
-![image](img/3.png)
-- The successful attemp was `user2`. Here is I've used more difficult password with letters, numbers and specific symbols
-![image](img/4.png)
+![image](img/8.png)
+
+- After that we can connect our containers and inspect our access to public IP addresses
+```
+docker exec -it private_container1 /bin/bash
+docker exec -it public_container1 /bin/bash
+```
+
+![image](img/9.png)
