@@ -7,14 +7,14 @@ Docker. Task1 <br>
 ```
 docker build -t nginx:latest .
 ```
--  [image](img/2.png)
+![image](img/2.png)
 - with command I ran my just created docker image
 ```
 docker run -name task1 -d -p 8080:80 nginx:latest 
 ```
-- [image](img/3.png) </br>
+![image](img/3.png) </br>
 - here is the result 
-- [image](img/4.png)
+![image](img/4.png)
 ----------------------------------------------
 
 To run a playbook please use:
