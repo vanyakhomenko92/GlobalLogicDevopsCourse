@@ -38,7 +38,7 @@ pipeline {
         } 
         stage('Notification') {
             when {
-                branch 'main'
+                branch 'master'
 	        }
             steps {
                 notifyEvents message: "${OWNER}, Build and test were successful", token: '5896903875:AAF2-YrNhtufWCzrjIMsAIA5DDkVgB_2RGA'
