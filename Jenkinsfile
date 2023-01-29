@@ -1,22 +1,19 @@
-pipeline {
-    agent any
-    environment{
-      FLUTTER_VERSION = "2.2.2" 
-    }
-    stages {
-        stage{'Analyze'} {
-            steps {
-                sh '''
-                    date
-                '''
+ stages {
+        stage('Build') { 
+            steps { 
+                sh 'make' 
             }
         }
-        stage {'Test'} {
+        stage('Test'){
             steps {
-                sh '''
-                    ls -al
-                '''
+                sh 'make check'
+                junit 'reports/**/*.xml' 
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'make publish'
             }
         }
     }
-} 
+}
