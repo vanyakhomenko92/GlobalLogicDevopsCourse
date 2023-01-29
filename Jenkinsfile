@@ -4,19 +4,19 @@ pipeline {
       FLUTTER_VERSION = "2.2.2" 
     }
     stages {
-      stage{'Analyze'} {
-        steps {
-          sh '''
-              date
-          '''
+        stage{'Analyze'} {
+            steps {
+                sh '''
+                    date
+                '''
+            }
         }
-      }
-      stage {'Test'} {
-        steps {
-          sh '''
-              ls -al
-          '''
+        stage {'Test'} {
+            steps {
+                sh '''
+                    ls -al
+                '''
+            }
         }
-      }
     }
 } 
