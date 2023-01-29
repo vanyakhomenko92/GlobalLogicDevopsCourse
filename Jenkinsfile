@@ -41,7 +41,7 @@ pipeline {
                 branch 'master'
 	        }
             steps {
-                notifyEvents message: "Build and test were successful", token: '5896903875:AAF2-YrNhtufWCzrjIMsAIA5DDkVgB_2RGA'
+                notifyEvents message: "Build and test were successful", token: '6005293687:AAGigUMAR5t203QoaEIZhV-r6Hg_1UtiSuA'
                 echo 'Jenkins sends notification on telegram about success'
             }
         }
