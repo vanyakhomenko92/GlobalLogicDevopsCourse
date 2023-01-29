@@ -45,7 +45,6 @@ pipeline {
                 """)
                    }
                 }
-         }
         aborted {
             withCredentials([string(credentialsId: 'token', variable: 'token'), string(credentialsId: 'chat_id', variable: 'chat_id')]) {
                 sh  ("""
@@ -60,5 +59,5 @@ pipeline {
                  """)
                    }
                  }
-      }
+       }
 }
