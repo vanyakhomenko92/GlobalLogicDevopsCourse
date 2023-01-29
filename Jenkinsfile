@@ -11,6 +11,9 @@ pipeline {
                 '''
             }
         }
+        environment {
+            OWNER = 'Ivan'
+        }
         
         stage('2 - Test') {
             steps {
