@@ -36,14 +36,12 @@ pipeline {
                 echo "Result: SUCCESS"
             }
         } 
-        stage('Notification') {
-            when {
-                branch 'master'
-	        }
-            steps {
-                notifyEvents message: "Build and test were successful", token: '6005293687:AAGigUMAR5t203QoaEIZhV-r6Hg_1UtiSuA'
-                echo 'Jenkins sends notification on telegram about success'
+        post {
+            success { 
+                sh  ("""
+                    curl -s -X POST https://api.telegram.org/bot${TOKEN}/sendMessage -d chat_id=${CHAT_ID} -d parse_mode=markdown -d text='*https://github.com/yurakorabel/task9_jenkins* \n *Job Name: task9_job* \n *Branch*: $GIT_BRANCH \n *Build* : [OK](${BUILD_URL}consoleFull)'
+                """)
             }
-        }
-    }
+	}
+    }   
 }
