@@ -11,9 +11,6 @@ pipeline {
                 '''
             }
         }
-        environment {
-            OWNER = 'Ivan'
-        }
         
         stage('2 - Test') {
             steps {
@@ -44,7 +41,7 @@ pipeline {
                 branch 'master'
 	        }
             steps {
-                notifyEvents message: "${OWNER}, Build and test were successful", token: '5896903875:AAF2-YrNhtufWCzrjIMsAIA5DDkVgB_2RGA'
+                notifyEvents message: "Build and test were successful", token: '5896903875:AAF2-YrNhtufWCzrjIMsAIA5DDkVgB_2RGA'
                 echo 'Jenkins sends notification on telegram about success'
             }
         }
