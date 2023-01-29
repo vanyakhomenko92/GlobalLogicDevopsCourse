@@ -43,6 +43,7 @@ pipeline {
                 sh  ("""
                     curl -s -X POST https://api.telegram.org/bot${token}/sendMessage -d chat_id=${chat_id} -d parse_mode=markdown -d text='*${env.JOB_NAME}* : POC *Branch*: ${env.GIT_BRANCH} *Build* : OK *Published* = YES'
                 """)
+                   }
                 }
-        }
+         }
 }
