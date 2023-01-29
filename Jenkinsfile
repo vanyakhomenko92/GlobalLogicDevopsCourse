@@ -39,7 +39,7 @@ pipeline {
         post {
             success { 
                 sh  ("""
-                    curl -s -X POST https://api.telegram.org/bot${TOKEN}/sendMessage -d chat_id=${CHAT_ID} -d parse_mode=markdown -d text='*https://github.com/yurakorabel/task9_jenkins* \n *Job Name: task9_job* \n *Branch*: $GIT_BRANCH \n *Build* : [OK](${BUILD_URL}consoleFull)'
+                    curl -s -X POST https://api.telegram.org/bot5896903875:AAF2-YrNhtufWCzrjIMsAIA5DDkVgB_2RGA/sendMessage -d chat_id=-1001239498345 -d parse_mode=markdown -d text='*https://github.com/yurakorabel/task9_jenkins* \n *Job Name: task9_job* \n *Branch*: $GIT_BRANCH \n *Build* : [OK](${BUILD_URL}consoleFull)'
                 """)
             }
 	}
