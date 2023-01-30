@@ -18,5 +18,5 @@ kubectl get nodes -o wide
 
 ```
 
-![image](image/3.png)
+![image](img/3.png)
 
